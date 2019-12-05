@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plot
 import numpy as np
+from pylab import rcParams
 
 
 def print_round_plot(values: list, title: str, ticks: list):
@@ -20,6 +21,7 @@ def print_plot(values: list, label_x: str, label_y: str, title: str, ticks: list
     column_width = 0.8
     border_width = 0.3
     height = np.arange(len(values))
+    rcParams['figure.figsize'] = 10, 5
 
     plot.title(title)
     plot.xlabel(label_x)
